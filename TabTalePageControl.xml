@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ttScenes>
+	<!-- define from which scene to put this layer -->
+	<ttTransactionPrev>pageTurnBack</ttTransactionPrev>
+	<ttTransactionNext>pageTurn</ttTransactionNext>
+	<ttTransactionPrevTime>1.0</ttTransactionPrevTime>
+	<ttTransactionNextTime>1.0</ttTransactionNextTime>
+	<ttStartScene>1</ttStartScene>
+	<ttScene>
+	</ttScene>
+</ttScenes>

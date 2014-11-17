@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scores</key>
+	<dict>
+		<key>RegularScore</key>
+		<dict>
+			<key>InitialValue</key>
+			<integer>0</integer>
+		</dict>
+		<key>LeaderBoardScore</key>
+		<dict>
+			<key>useLeaderboard</key>
+			<true/>
+			<key>InitialValue</key>
+			<integer>0</integer>
+		</dict>
+		<key>MilestoneScore</key>
+		<dict>
+			<key>InitialValue</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>Milestones</key>
+	<dict>
+		<key>RegularScoreMilestone</key>
+		<dict>
+			<key>Name</key>
+			<string>milestone1</string>
+			<key>Description</key>
+			<string>achieve 2</string>
+			<key>ScoreID</key>
+			<string>RegularScore</string>
+			<key>TargetScore</key>
+			<integer>2</integer>
+		</dict>
+		<key>LeaderBoardMilestone</key>
+		<dict>
+			<key>Name</key>
+			<string>milestone2</string>
+			<key>Description</key>
+			<string>achieve 4</string>
+			<key>ScoreID</key>
+			<string>LeaderBoardScore</string>
+			<key>TargetScore</key>
+			<integer>4</integer>
+		</dict>
+		<key>Milestone</key>
+		<dict>
+			<key>useAchievements</key>
+			<true/>
+			<key>Name</key>
+			<string>milestone3</string>
+			<key>Description</key>
+			<string>achieve 6</string>
+			<key>ScoreID</key>
+			<string>MilestoneScore</string>
+			<key>TargetScore</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

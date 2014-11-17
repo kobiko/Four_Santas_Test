@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ttMacro name="customPanel">
+    <ttMacroParams>
+    </ttMacroParams>
+    <ttMacroBody>
+        <ttObject>
+            <ttVisibleScript>return (hideCustomPanelContainer ~= 1)</ttVisibleScript>
+            <ttId>customPanelLabel</ttId>
+            <ttType>lable</ttType>
+            <ttImage>{Example Custom Panel}</ttImage>
+            <ttAnchorPositionX>0.0</ttAnchorPositionX>
+            <ttAnchorPositionY>1.0</ttAnchorPositionY>
+            <ttBasePositionX>13.5</ttBasePositionX>
+            <ttBasePositionY>45.5</ttBasePositionY>
+            <ttGreenPercentage>100</ttGreenPercentage>
+            <ttFontSize>28</ttFontSize>
+            <ttAlignment>left</ttAlignment>
+            <!--scrolling-->
+            <!--ttActionsGroup>
+                <ttTrigger>notification</ttTrigger>
+                <ttNotificationIdentifyer>showHideCustomPanelContainer</ttNotificationIdentifyer>
+                <ttSequenceGroup>
+                    <ttAction>
+                        <ttType>toggleVisibility</ttType>
+                    </ttAction>
+                </ttSequenceGroup>
+            </ttActionsGroup>
+            <ttActionsGroup>
+                <ttTrigger>automatic+notification</ttTrigger>
+                <ttNotificationIdentifyer>scrollDebugLogUp</ttNotificationIdentifyer>
+                <ttOperator>
+                    <ttScript>return (isLandscape == 1)</ttScript>
+                </ttOperator>
+                <ttSequenceGroup>
+                    <ttAction>
+                        <ttType>moveToPoint</ttType>
+                        <ttActionDuration>0.2</ttActionDuration>
+                        <ttFinalPositionX>12.5</ttFinalPositionX>
+                        <ttFinalPositionY>45</ttFinalPositionY>
+                    </ttAction>
+                </ttSequenceGroup>
+            </ttActionsGroup>
+            <ttActionsGroup>
+                <ttTrigger>automatic+notification</ttTrigger>
+                <ttNotificationIdentifyer>scrollDebugLogUp</ttNotificationIdentifyer>
+                <ttOperator>
+                    <ttScript>return (isLandscape == 0)</ttScript>
+                </ttOperator>
+                <ttSequenceGroup>
+                    <ttAction>
+                        <ttType>moveToPoint</ttType>
+                        <ttActionDuration>0.2</ttActionDuration>
+                        <ttFinalPositionX>0.5</ttFinalPositionX>
+                        <ttFinalPositionY>40</ttFinalPositionY>
+                    </ttAction>
+                </ttSequenceGroup>
+            </ttActionsGroup>
+            <ttActionsGroup>
+                <ttTrigger>onTouchesMoved</ttTrigger>
+                <ttSequenceGroup>
+                    <ttAction>
+                        <ttType>moveToTouch</ttType>
+                        <ttDragFromTap>YES</ttDragFromTap>
+                    </ttAction>
+                </ttSequenceGroup>
+            </ttActionsGroup-->
+        </ttObject>
+    </ttMacroBody>
+</ttMacro>
+

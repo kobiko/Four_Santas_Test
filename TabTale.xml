@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<ttScenes>
+    
+	<ttStartScene>0</ttStartScene>
+    <ttPageControlStartScene>1</ttPageControlStartScene>
+    <ttXmlVerion>1</ttXmlVerion>
+    <ttShowDebugMenu>yes</ttShowDebugMenu>
+    <ttBookLanguage>english</ttBookLanguage>
+    <ttAppName>Social Services</ttAppName>
+    <ttMailSubject/>
+    <ttImport>TabTaleMacros.xml</ttImport>
+	<ttScene>
+		<ttName>mainScene</ttName>
+		<ttInitScript>socialGameService.init()</ttInitScript>
+		<ttLayer>
+			<ttName>backgroundLayer</ttName>
+			<ttObject>
+				<ttImage>backgrounds/cover_bck.jpg</ttImage>
+				<ttIsBackground>YES</ttIsBackground>
+				<ttBasePosition x="50" y="50"/>
+			</ttObject>
+			<ttObject>
+				<ttImage>Connect...</ttImage>
+				<ttType>lable</ttType>
+				<ttBasePosition x="20" y="90"/>
+				<ttScale>1</ttScale>
+				<ttAlignment>left</ttAlignment>
+				<ttFontSize>25</ttFontSize>
+				<ttFontType>ArialRoundedMTBold</ttFontType>
+				<ttRedPercentage>7.1</ttRedPercentage>
+				<ttGreenPercentage>18.8</ttGreenPercentage>
+				<ttBluePercentage>73</ttBluePercentage>
+				<ttEnabled>YES</ttEnabled>
+				<ttVisible>YES</ttVisible>
+				<ttActionsGroup>
+					<ttTrigger>automatic</ttTrigger>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>enableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>automatic+notification</ttTrigger>
+					<ttNotificationIdentifyer>SocialGameServiceConnected</ttNotificationIdentifyer>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>makeInvisible</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>disableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>onTouchesBegan</ttTrigger>
+					<ttOperator>
+						<ttScript>return (not socialGameService.isConnected())</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>0.85</ttScaleX>
+							<ttScaleY>1.15</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>1.1</ttScaleX>
+							<ttScaleY>0.9</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeBackOut</ttActionEaseMode>
+							<ttScaleX>1</ttScaleX>
+							<ttScaleY>1</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>runScript</ttType>
+							<ttScript>socialGameService.connect()</ttScript>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+			</ttObject>
+			<ttObject>
+				<ttImage>Show leader board</ttImage>
+				<ttType>lable</ttType>
+				<ttBasePosition x="20" y="90"/>
+				<ttScale>1</ttScale>
+				<ttAlignment>left</ttAlignment>
+				<ttFontSize>25</ttFontSize>
+				<ttFontType>ArialRoundedMTBold</ttFontType>
+				<ttRedPercentage>7.1</ttRedPercentage>
+				<ttGreenPercentage>18.8</ttGreenPercentage>
+				<ttBluePercentage>73</ttBluePercentage>
+				<ttEnabled>NO</ttEnabled>
+				<ttVisible>NO</ttVisible>
+				<ttActionsGroup>
+					<ttTrigger>automatic</ttTrigger>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>disableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>automatic+notification</ttTrigger>
+					<ttNotificationIdentifyer>SocialGameServiceConnected</ttNotificationIdentifyer>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>enableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>makeVisible</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>onTouchesBegan</ttTrigger>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>0.85</ttScaleX>
+							<ttScaleY>1.15</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>1.1</ttScaleX>
+							<ttScaleY>0.9</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeBackOut</ttActionEaseMode>
+							<ttScaleX>1</ttScaleX>
+							<ttScaleY>1</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>runScript</ttType>
+							<ttScript>socialGameService.showLeaderboard("LeaderBoardScore")</ttScript>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+			</ttObject>
+			<ttObject>
+				<ttImage>Show all leader boards</ttImage>
+				<ttType>lable</ttType>
+				<ttBasePosition x="50" y="90"/>
+				<ttScale>1</ttScale>
+				<ttAlignment>left</ttAlignment>
+				<ttFontSize>25</ttFontSize>
+				<ttFontType>ArialRoundedMTBold</ttFontType>
+				<ttRedPercentage>7.1</ttRedPercentage>
+				<ttGreenPercentage>18.8</ttGreenPercentage>
+				<ttBluePercentage>73</ttBluePercentage>
+				<ttEnabled>NO</ttEnabled>
+				<ttVisible>NO</ttVisible>
+				<ttActionsGroup>
+					<ttTrigger>automatic</ttTrigger>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>disableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>automatic+notification</ttTrigger>
+					<ttNotificationIdentifyer>SocialGameServiceConnected</ttNotificationIdentifyer>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>enableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>makeVisible</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>onTouchesBegan</ttTrigger>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>0.85</ttScaleX>
+							<ttScaleY>1.15</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>1.1</ttScaleX>
+							<ttScaleY>0.9</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeBackOut</ttActionEaseMode>
+							<ttScaleX>1</ttScaleX>
+							<ttScaleY>1</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>runScript</ttType>
+							<ttScript>socialGameService.showAllLeaderboards()</ttScript>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+			</ttObject>
+			<ttObject>
+				<ttImage>Show achievements</ttImage>
+				<ttType>lable</ttType>
+				<ttBasePosition x="80" y="90"/>
+				<ttScale>1</ttScale>
+				<ttAlignment>left</ttAlignment>
+				<ttFontSize>25</ttFontSize>
+				<ttFontType>ArialRoundedMTBold</ttFontType>
+				<ttRedPercentage>7.1</ttRedPercentage>
+				<ttGreenPercentage>18.8</ttGreenPercentage>
+				<ttBluePercentage>73</ttBluePercentage>
+				<ttEnabled>NO</ttEnabled>
+				<ttVisible>NO</ttVisible>
+				<ttActionsGroup>
+					<ttTrigger>automatic</ttTrigger>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>disableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>automatic+notification</ttTrigger>
+					<ttNotificationIdentifyer>SocialGameServiceConnected</ttNotificationIdentifyer>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>enableObject</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>makeVisible</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+				<ttActionsGroup>
+					<ttTrigger>onTouchesBegan</ttTrigger>
+					<ttOperator>
+						<ttScript>return socialGameService.isConnected()</ttScript>
+					</ttOperator>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>0.85</ttScaleX>
+							<ttScaleY>1.15</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeInOut</ttActionEaseMode>
+							<ttScaleX>1.1</ttScaleX>
+							<ttScaleY>0.9</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>scaleXy</ttType>
+							<ttActionDuration>0.12</ttActionDuration>
+							<ttActionEaseRate>2.00</ttActionEaseRate>
+							<ttActionEaseMode>easeBackOut</ttActionEaseMode>
+							<ttScaleX>1</ttScaleX>
+							<ttScaleY>1</ttScaleY>
+						</ttAction>
+					</ttSequenceGroup>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>runScript</ttType>
+							<ttScript>socialGameService.showAchievement()</ttScript>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+			</ttObject>
+			
+			<ttMacroInvoke macro_name="score">
+				<ttMacroParam name="$name" value="RegularScore"/>
+				<ttMacroParam name="$id" value="score1"/>
+				<ttMacroParam name="$yPos" value="70"/>
+			</ttMacroInvoke>
+			
+			<ttMacroInvoke macro_name="score">
+				<ttMacroParam name="$name" value="LeaderBoardScore"/>
+				<ttMacroParam name="$id" value="score2"/>
+				<ttMacroParam name="$yPos" value="50"/>
+			</ttMacroInvoke>
+			
+			<ttMacroInvoke macro_name="score">
+				<ttMacroParam name="$name" value="MilestoneScore"/>
+				<ttMacroParam name="$id" value="score3"/>
+				<ttMacroParam name="$yPos" value="30"/>
+			</ttMacroInvoke>
+			
+			<ttObject>
+				<ttImage>images/V.png</ttImage>
+				<ttBasePosition x="5" y="30"/>
+				<ttScale>1</ttScale>
+				<ttVisible>NO</ttVisible>
+				<ttActionsGroup>
+					<ttTrigger>notification</ttTrigger>
+					<ttNotificationIdentifyer>MilestoneAchieved</ttNotificationIdentifyer>
+					<ttSequenceGroup>
+						<ttAction>
+							<ttType>makeVisible</ttType>
+						</ttAction>
+					</ttSequenceGroup>
+				</ttActionsGroup>
+			</ttObject>
+		</ttLayer>
+	</ttScene>
+	
+	<ttTransformablesMaxScale>2</ttTransformablesMaxScale>
+	<ttTransformablesMinScale>1</ttTransformablesMinScale>
+</ttScenes>

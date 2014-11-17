@@ -1,0 +1,5 @@
+type,image,appName,bundleID,appleAppID,priceTier,link,externalLink,description,marketingImage,coverRGB
+appshelf,not installed,Title=Enjoy Great Apps By TabTale!,numberOfAppShelfApps=14,numberOfAppShelfBanners=3,appShelfBannerDisplayTime=30,,,,,
+icon,i_Baby.jpg,Baby Dressup,com.tabtale.babiesdressup,595303942,0,,,,,
+icon,i_PaintSparkle.jpg,Paint Sparkles,com.kidsgamesclub.PaintSparkles,435539858,0,,,,,
+icon,i_IceCream.jpg,Ice Cream Truck,com.tabtale.icecreammaker,604907844,0,,,A Crazy Chef Adventure,,

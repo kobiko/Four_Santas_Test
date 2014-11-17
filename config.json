@@ -1,0 +1,36 @@
+{
+    "specificConfigPath":"com.tabtale.monsters",
+    "s3BucketName":"com.tabtale.books.content.testAA",
+    "s3Endpoint":"http://s3.amazonaws.com",
+    "awsAccessKey":"AKIAI7FJ45GUK3I6663Q",
+    "awsSecretKey":"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",
+    "encrypted":"1",
+    "orientation":"landscape",
+    "flurryKey":"42KSYS6XRZS4JNTQWVS8",
+    "appoxeeKey":"6dfb3d2c-16b0-41cb-af29-ff01e2c52b87",
+    "appoxeeSecret":"9e1d74d55cce3ecef84b815a6c9abbb9",
+    "inAppPurchaseType":"removeAds",
+    "showBannerAds":"no",
+    "adKey":"ebcc9becca5f444a",
+    "adKeyBanneriPad":"a14fd09958c824a",
+    "adKeyBanneriPhone":"a14fd098edc8c4e",
+    "adKeyInteriPad":"a14fd09a2f06439",
+    "adKeyInteriPhone":"a14fd099dc7c828",
+    "applicationLink":"http://itunes.apple.com/app/id580124289",
+    "currentBookType":"game",
+	"gameCenter" : {
+		"enabled":"yes",
+		"leaderboardsIds":{
+			"LeaderBoardScore":"CgkIhumwmrcTEAIQAA"
+		},
+		"achievementsIds":{
+			"Milestone":"CgkIhumwmrcTEAIQAg"
+		}
+	},
+    "logEnable":"yes",
+    "inAppPurchaseDebug":"yes",
+    "s3ConfigPath":"english/games",
+    "bookShelfGlobalPath":"english/appshelf",
+    "clearInAppData":"no",
+    "InAppKey":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlYcZDdes4z/H/CUxgffYVvvYNivmBafBw/dq0v6LQ1m5QCaf4A3zjinOReFly9vY8mBHAxgslNn9G2GHjVt0skv3rsA3vcUj9w7B9LNwWWtzioYGlpscNgKXsh84V5Lbut3ybXh3vesa1iO8Qw3TDA+YSRkG1qWPWkuNv+Hz4tLuK+h/r3sQL6ae8jYz6Tt3dHIDMKOJqe9qNNN1AqZBwUVJaW7gnCI7LqtJ3t/8slV01RJAwQpDr76UpPbAH6L0e6s1Al9bCBSYQI/HjscQBIJZywpeE4bvXnjbBD0Cgj75DhvuzubFCD0vQ7qUwTZgtORcBNUg42acKcnMU+0QyQIDAQAB"
+}

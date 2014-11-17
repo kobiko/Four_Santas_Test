@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+
+<ttMacro name="score">
+	<ttMacroParams>
+        <ttMacroParamDef name="$name"/>
+		<ttMacroParamDef name="$id"/>
+		<ttMacroParamDef name="$yPos"/>
+	</ttMacroParams>
+    <ttMacroBody>
+		<ttObject>
+			<ttImage>$name</ttImage>
+			<ttType>lable</ttType>
+			<ttBasePosition x="20" y="$yPos"/>
+			<ttScale>1</ttScale>
+			<ttAlignment>left</ttAlignment>
+			<ttFontSize>25</ttFontSize>
+			<ttFontType>ArialRoundedMTBold</ttFontType>
+			<ttRedPercentage>100</ttRedPercentage>
+			<ttGreenPercentage>18.8</ttGreenPercentage>
+			<ttBluePercentage>0</ttBluePercentage>
+		</ttObject>
+		<ttObject>
+			<ttId>$id</ttId>
+			<ttImage>script: return socialGameService.getScore("$name")</ttImage>
+			<ttType>lable</ttType>
+			<ttBasePosition x="40" y="$yPos"/>
+			<ttScale>1</ttScale>
+			<ttAlignment>left</ttAlignment>
+			<ttFontSize>25</ttFontSize>
+			<ttFontType>ArialRoundedMTBold</ttFontType>
+			<ttRedPercentage>100</ttRedPercentage>
+			<ttGreenPercentage>18.8</ttGreenPercentage>
+			<ttBluePercentage>0</ttBluePercentage>
+			<ttActionsGroup>
+				<ttTrigger>notification</ttTrigger>
+				<ttNotificationIdentifyer>changeScore.specific</ttNotificationIdentifyer>
+				<ttSequenceGroup>
+					<ttAction>
+						<ttType>setLabelText</ttType>
+						<ttText>script: return socialGameService.getScore("$name")</ttText>
+					</ttAction>
+				</ttSequenceGroup>
+			</ttActionsGroup>
+		</ttObject>
+		<ttObject>
+			<ttImage>Increase</ttImage>
+			<ttType>lable</ttType>
+			<ttBasePosition x="70" y="$yPos"/>
+			<ttScale>1</ttScale>
+			<ttAlignment>left</ttAlignment>
+			<ttFontSize>25</ttFontSize>
+			<ttFontType>ArialRoundedMTBold</ttFontType>
+			<ttRedPercentage>0</ttRedPercentage>
+			<ttGreenPercentage>100</ttGreenPercentage>
+			<ttBluePercentage>0</ttBluePercentage>
+			<ttActionsGroup>
+				<ttTrigger>onTouchesBegan</ttTrigger>
+				<ttSequenceGroup>
+					<ttAction>
+						<ttType>scaleXy</ttType>
+						<ttActionDuration>0.12</ttActionDuration>
+						<ttActionEaseRate>2.00</ttActionEaseRate>
+						<ttActionEaseMode>easeInOut</ttActionEaseMode>
+						<ttScaleX>0.85</ttScaleX>
+						<ttScaleY>1.15</ttScaleY>
+					</ttAction>
+				</ttSequenceGroup>
+				<ttSequenceGroup>
+					<ttAction>
+						<ttType>scaleXy</ttType>
+						<ttActionDuration>0.12</ttActionDuration>
+						<ttActionEaseRate>2.00</ttActionEaseRate>
+						<ttActionEaseMode>easeInOut</ttActionEaseMode>
+						<ttScaleX>1.1</ttScaleX>
+						<ttScaleY>0.9</ttScaleY>
+					</ttAction>
+				</ttSequenceGroup>
+				<ttSequenceGroup>
+					<ttAction>
+						<ttType>scaleXy</ttType>
+						<ttActionDuration>0.12</ttActionDuration>
+						<ttActionEaseRate>2.00</ttActionEaseRate>
+						<ttActionEaseMode>easeBackOut</ttActionEaseMode>
+						<ttScaleX>1</ttScaleX>
+						<ttScaleY>1</ttScaleY>
+					</ttAction>
+					<ttAction>
+						<ttType>runScript</ttType>
+						<ttScript>socialGameService.increaseScore("$name")</ttScript>
+					</ttAction>
+				</ttSequenceGroup>
+				<ttSequenceGroup>
+					<ttAction>
+						<ttType>sendNotification</ttType>
+						<ttNotificationIdentifyer>changeScore.specific</ttNotificationIdentifyer>
+						<ttNotificationTargetId>$id</ttNotificationTargetId>
+					</ttAction>
+				</ttSequenceGroup>
+			</ttActionsGroup>
+		</ttObject>
+	</ttMacroBody>
+</ttMacro>
+
